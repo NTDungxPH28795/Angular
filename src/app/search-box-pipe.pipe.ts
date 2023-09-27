@@ -1,0 +1,14 @@
+import { Pipe, PipeTransform } from '@angular/core';
+import { IProduct } from './interfaces/product';
+
+@Pipe({
+  name: 'searchBox'
+})
+export class SearchBoxPipePipe implements PipeTransform {
+
+  transform(data: IProduct[], searchText: string): any {
+    return data.filter(item => item.name.toLowerCase().includes(searchText.toLowerCase()))
+  }
+
+
+}
