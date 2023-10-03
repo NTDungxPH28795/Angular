@@ -8,10 +8,14 @@ import { ProductComponent } from './pages/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { DasboardComponent } from './pages/dasboard/dasboard.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 const routes: Routes = [
   {
     path: '',component: BaseLayoutComponent, children:[
+      {path: '',component: HomePageComponent},
       {path: 'about',component: AboutComponent},
       {path: 'product',component: ProductComponent},
       {path: 'product/:id',component: ProductDetailComponent},
@@ -20,7 +24,11 @@ const routes: Routes = [
   },
   {
     path: 'admin', component: AdminLayoutComponent, children:[
-      {path: 'products', component: ProductsComponent}
+      {path: '', redirectTo: "dashboard", pathMatch: "full"},
+      {path: 'dasboard', component: DasboardComponent},
+      {path: 'products', component: ProductsComponent},
+      {path: 'products/add', component: ProductEditComponent},
+      {path: 'products/:id/edit', component: ProductEditComponent}
     ]
   },
   {path: '**', component: NotFoundComponent}

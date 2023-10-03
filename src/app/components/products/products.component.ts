@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { data } from 'autoprefixer';
 import { IProduct } from 'src/app/interfaces/product';
-import { ProductService } from 'src/app/services/product/product.component';
+import { ProductService } from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'app-products',

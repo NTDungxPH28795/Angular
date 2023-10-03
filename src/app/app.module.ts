@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,6 +15,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
+import { DasboardComponent } from './pages/dasboard/dasboard.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
     AboutComponent,
     ContactComponent,
     ProductComponent,
-    ProductAddComponent
+    DasboardComponent,
+    HomePageComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,

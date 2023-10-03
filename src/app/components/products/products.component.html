@@ -23,7 +23,7 @@
                 <td>{{product.releaseDate | date: "dd-MM-yyyy"}}</td>
                 <td width="150" class="text-center">
                     <button class="btn btn-danger" (click)="removeItem(product.id!)">Xóa</button>
-                    <button class="btn btn-primary ms-2" (click)="editProduct(product)">Sửa</button>
+                    <button class="btn btn-primary ms-2" routerLink="/admin/products/{{product.id}}/edit">Sửa</button>
                 </td>
             </tr>
         </tbody>
